@@ -123,6 +123,18 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -131,20 +143,49 @@ body {
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
-  /* box-shadow(x y 흐림정도) */
+  /* box-shadow(x, y, 흐림정도) */
 }
 
 .btn:active {
   transform: translateY(-1px);
+  /*초기상태(link)를 기준으로 -1px, hover기준이 아닌 link 기준*/
   box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75;
+  animation-fill-mode: backwards;
 }
