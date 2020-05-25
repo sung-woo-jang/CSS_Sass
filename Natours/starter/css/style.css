@@ -163,8 +163,11 @@ body {
   color: #777;
 }
 
+/* ::after = 선택한 요소의 맨 마지막 자식의 의사 요소를 하나 생성 */
 .btn::after {
   content: "";
+  /* ㄴ>의사 요소 이후에 나타나야하니 무조건 있어야 함 
+  content에 뭔가 쓰여있으면 의사요소를 생성하겠단 의미*/
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -186,6 +189,6 @@ body {
 }
 
 .btn-animated {
-  animation: moveInBottom 0.5s ease-out 0.75;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
