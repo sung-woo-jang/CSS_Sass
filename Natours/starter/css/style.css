@@ -7,27 +7,19 @@ Dark green: #28b485
 
 */
 
-*,
-*::after,
-a::before {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Late", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  /* ㄴ> 패딩은 상속이 안 됨. */
-  box-sizing: border-box;
+  padding: 30px;
 }
 
 .header {
@@ -35,168 +27,50 @@ body {
   background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.801)
+      rgb(40, 180, 133, 0.8)
     ),
     url(../img/hero.jpg);
-  /* liner-gradient 왼쪽에서 오른쪽으로 하단으로 감 */
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* clip-path: polygon()가 한 세트
+     영역을 다각형으로 자를 수 있음 */
 }
 
-/*이 클래스의 부모 = header클래스, 부모한테 상대경로를 상속받음(참조?)*/
-.header__logo-box {
+.logo-box {
   position: absolute;
-  top: 4rem;
-  left: 4rem;
+  top: 40px;
+  left: 40px;
 }
 
-.header__logo/*이미지 자체 크기 지정*/ {
-  height: 3.5rem;
+.logo {
+  height: 35px;
 }
 
-.header__text-box {
+.text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 6rem;
 }
 
-.heading-primary--main {
+.heading-primary-main {
   display: block;
-  font-size: 6rem;
+  font-size: 60px;
   font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  backface-visibility: hidden; /* 
-    ㄴ>이게 시발 뭐라고 해야하지 애니메이션 실행 하고
-    살짝 흔들리면서 내가 정한 포지션에서 조금 바뀌는 현상이 있는데 
-    그걸 고쳐준대 몰라 암튼 고쳐준대 ㅇㅇ
-  */
-  /* 
-  animation-iteration-count: 3; 아니메 3번 실행
-  animation-delay: 3s; 3초 후 애니메이션 실행
-  */
+  letter-spacing: 35px;
 }
 
-.heading-primary--sub {
+.heading-primary-sub {
   display: block;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 1.75rme;
-  animation: moveInRight 1s ease-out;
-  backface-visibility: hidden;
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-  font-size: 1.6rem;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /* box-shadow(x, y, 흐림정도) */
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  /*초기상태(link)를 기준으로 -1px, hover기준이 아닌 link 기준*/
-  box-shadow: 0 0.5rem 5px 1rem rgba(0, 0, 0, 0.4);
-}
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
-/* ::after = 선택한 요소의 맨 마지막 자식의 의사 요소를 하나 생성 */
-.btn::after {
-  content: "";
-  /* ㄴ>의사 요소 이후에 나타나야하니 무조건 있어야 함 
-  content에 뭔가 쓰여있으면 의사요소를 생성하겠단 의미*/
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
+  letter-spacing: 17.4px;
 }
