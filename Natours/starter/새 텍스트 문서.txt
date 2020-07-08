@@ -1,0 +1,32 @@
+
+각 재산에는 초기값이 있으며, 아무것도 선언하지 않은 경우(그리고 상속이 없는 경우 - 다음 강의 참조) 사용된다.
+Each property has an initial value, used if nothing is declared (and if there is no inheritance - see next lecture);
+
+브라우저에서 각 페이지(일반적으로 16px)에 대한 root font-size를 지정한다.
+Browsers specify a root font-size for each page (usually 16px);
+
+백분율 및 상대 값은 항상 픽셀로 변환된다.
+Percentages and relative values are always convert to pixels;
+
+백분율은 parent's font-size에 비례하여 측정되며, 글꼴 크기를 지정하는 데 사용되는 경우
+Percentages are measured relative to their parent's font-size, if used to specify font-size
+
+백분율은 font-size를 지정하는 데 사용되는 경우 parent's width에 비례하여 측정된다.
+Percentages are measured relative to their parent's width, if used to specify font-size
+
+em은 글꼴 크기를 지정하는 데 사용되는 경우 parent font-size에 비례하여 측정된다.
+em are measured relative to their parent font-size, if used to specify font-size;
+
+em은 길이를 지정하는 데 사용되는 경우 현재 font-size에 비례하여 측정한다.
+em are measured relative to their current font-size, if used to specify lengths;
+
+rem은 항상 문서의 루트 글꼴 크기에 비례하여 측정된다.
+rem are always measured relative to the document's root font-size;
+
+vh 및 vw는 단순히 뷰포트 높이와 너비의 백분율 측정값이다.
+vh and vw are simply percentage measurements of the viewport's height and widht
+
+상속은 부모로부터 자식에게 특정 재산에 대한 값을 전달한다 - 코드 유지보수에 유리함.
+Inheritance passes the values for some specific properties from parents to children - more maintainable code;
+
+
