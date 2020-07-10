@@ -1,6 +1,5 @@
 .row {
   width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
   /*블록 요소를 중앙에 배치하는데 사용하는 트릭*/
 
@@ -17,7 +16,6 @@
   * == '이름'을 포함한 모든 것  
   */
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
