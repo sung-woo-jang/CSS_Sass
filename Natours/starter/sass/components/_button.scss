@@ -1,54 +1,28 @@
 .btn {
+  &,
+  /* 아직 방문하지 않은 <a> 요소를 선택 */
   &:link,
-  &:visited {
+    /* 방문한 <a> 요소를 선택 */
+    &:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
-    display: inline-block;
+    position: relative;
+    display: inline-block; /* 문자로 취급. 위에서 text-align: center; 적용하여 정렬. */
     border-radius: 10rem;
     transition: all 0.2s;
-    position: relative;
-    font-size: $defalut-font-size;
-  }
+    font-size: $default-font-size;
 
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-    /* box-shadow : x방향px y방향px 블러정도 색깔px */
-
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
-  }
-
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-  }
-
-  &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-
-    &::after {
-      background-color: $color-white;
-    }
-  }
-  &--green {
-    background-color: $color-primary;
-    color: $color-white;
-
-    &::after {
-      background-color: $color-primary;
-    }
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &::after {
     content: "";
     display: inline-block;
-    height: 100%;
     width: 100%;
+    height: 100%;
     border-radius: 10rem;
     position: absolute;
     top: 0;
@@ -57,8 +31,41 @@
     transition: all 0.4s;
   }
 
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow;
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: $shadow;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation: moveInBottom 0.5s ease-out 0.75s; // 0.75s는 delay시간.
     animation-fill-mode: backwards;
   }
 }
@@ -66,23 +73,23 @@
 .btn-text {
   &:link,
   &:visited {
-    font-size: $defalut-font-size;
+    font-size: $default-font-size;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solide $color-primary;
+    border-bottom: 1px solid $color-primary;
     padding: 3px;
     transition: all 0.2s;
   }
+
   &:hover {
     background-color: $color-primary;
     color: $color-white;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(-2px);
   }
-
   &:active {
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(0);
   }
 }
