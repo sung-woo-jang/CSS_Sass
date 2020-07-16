@@ -16,8 +16,7 @@
     // hidden으로 설정하면 기본적으로 요소의 뒷 부분을 숨김
     border-radius: 0.3rem;
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-
+    box-shadow: $shadow;
     &--front {
       background-color: $color-white;
     }
