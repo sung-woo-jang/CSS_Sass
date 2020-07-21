@@ -19,6 +19,39 @@
 npm run compile:sass
 live-server -->
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><span>01</span> About Natous</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><span>02</span> Your benefits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><span>03</span> Popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>04</span> Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>05</span> Book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header__logo" />
@@ -29,7 +62,7 @@ live-server -->
           <span class="heading-primary--main">OUTDOORS</span
           ><span class="heading-primary--sub">is where life happens</span>
         </h1>
-        <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
       </div>
     </header>
 
@@ -140,7 +173,7 @@ live-server -->
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Most popular tours
@@ -168,6 +201,7 @@ live-server -->
                   </ul>
                 </div>
               </div>
+
               <div class="card__side card__side--back card__side--back-1">
                 <div class="card__cta">
                   <div class="card__price-box">
@@ -176,7 +210,7 @@ live-server -->
                     </p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -203,6 +237,7 @@ live-server -->
                   </ul>
                 </div>
               </div>
+
               <div class="card__side card__side--back card__side--back-2">
                 <div class="card__cta">
                   <div class="card__price-box">
@@ -211,7 +246,7 @@ live-server -->
                     </p>
                     <p class="card__price-value">$497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -246,7 +281,7 @@ live-server -->
                     </p>
                     <p class="card__price-value">$897</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -428,6 +463,24 @@ live-server -->
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">Important &nbsp; Please read these terms before booking</h2>
+            <p class="popup__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, et nobis. Provident esse eaque, maxime accusantium neque dolore laboriosam omnis consequuntur non optio sint itaque illo! Consectetur quaerat cupiditate aut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis expedita laborum deleniti impedit nam autem. Eos deleniti accusamus ipsum doloremque ipsa at vel, quaerat repellendus placeat fugiat ea laudantium velit?
+            </p>
+            <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
     <!-- 
     <section class="grid-test">
       <div class="row">

@@ -1,25 +1,28 @@
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  //   자식 요소에게 적용(?)
   position: relative;
   height: 52rem;
 
   &__side {
     height: 52rem;
+    font-size: 2rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    // hidden으로 설정하면 기본적으로 요소의 뒷 부분을 숨김
-    border-radius: 0.3rem;
+    /* 요소의 뒷 면을 숨김 앞카드 뒷카드 둘 다 뒷면을 숨기고 붙히니 
+    하나의 진짜 카드같은 효과가 됨 */
+    border-radius: 3px;
     overflow: hidden;
     box-shadow: $shadow;
+
     &--front {
       background-color: $color-white;
     }
+
     &--back {
       transform: rotateY(180deg);
 
@@ -50,7 +53,6 @@
   &:hover &__side--front {
     transform: rotateY(-180deg);
   }
-
   &:hover &__side--back {
     transform: rotateY(0);
   }
@@ -59,9 +61,8 @@
     background-size: cover;
     height: 23rem;
     background-blend-mode: screen;
-    // 배경 이미지랑 배경색을 블랜딩
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
@@ -90,7 +91,6 @@
         url(../img/nat-7.jpg);
     }
   }
-
   &__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -102,12 +102,12 @@
     right: 2rem;
     width: 75%;
   }
+
   &__heading-span {
     padding: 1rem 1.5rem;
-
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
     &--1 {
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone;
       background-image: linear-gradient(
         to right bottom,
         rgba($color-secondary-light, 0.85),
@@ -115,21 +115,17 @@
       );
     }
     &--2 {
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone;
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-primary-light, 0.85),
-        rgba($color-primary-dark, 0.85)
+        $color-primary-light,
+        $color-primary-dark
       );
     }
     &--3 {
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone;
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-tertiary-light, 0.85),
-        rgba($color-tertiary-dark, 0.85)
+        $color-tertiary-light,
+        $color-tertiary-dark
       );
     }
   }
@@ -150,6 +146,7 @@
       }
     }
   }
+
   &__cta {
     position: absolute;
     top: 50%;
@@ -160,15 +157,14 @@
   }
 
   &__price-box {
-    text-align: center;
     color: $color-white;
     margin-bottom: 8rem;
   }
+
   &__price-only {
     font-size: 1.4rem;
     text-transform: uppercase;
   }
-
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
