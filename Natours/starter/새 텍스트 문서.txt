@@ -29,4 +29,62 @@ vh and vw are simply percentage measurements of the viewport's height and widht
 상속은 부모로부터 자식에게 특정 재산에 대한 값을 전달한다 - 코드 유지보수에 유리함.
 Inheritance passes the values for some specific properties from parents to children - more maintainable code;
 
+.prettierrc.json
+{
+  "singleQuote": true,
+  "semi": true,
+  "useTabs": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "printWidth": 70
+}
+
+
+setting.json
+{
+  "sync.gist": "8b40363899811832584d18279c2b4934",
+  "launch": {
+  
+    "configurations": [],
+    "compounds": []
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "#5bdbca"
+  },
+  "workbench.colorTheme": "Abyss",
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#34f5ab",
+    "activityBar.activeBorder": "#34f5ab",
+    "list.activeSelectionForeground": "#34f5ab",
+    "list.inactiveSelectionForeground": "#34f5ab",
+    "list.highlightForeground": "#34f5ab",
+    "scrollbarSlider.activeBackground": "#2979FF50",
+    "editorSuggestWidget.highlightForeground": "#34f5ab",
+    "textLink.foreground": "#34f5ab",
+    "progressBar.background": "#34f5ab",
+    "pickerGroup.foreground": "#34f5ab",
+    "tab.activeBorder": "#34f5ab",
+    "notificationLink.foreground": "#34f5ab",
+    "editorWidget.resizeBorder": "#34f5ab",
+    "editorWidget.border": "#34f5ab",
+    "settings.modifiedItemIndicator": "#34f5ab",
+    "settings.headerForeground": "#34f5ab",
+    "panelTitle.activeBorder": "#34f5ab",
+    "breadcrumb.activeSelectionForeground": "#34f5ab",
+    "menu.selectionForeground": "#34f5ab",
+    "menubar.selectionForeground": "#34f5ab",
+    "editor.findMatchBorder": "#34f5ab",
+    "selection.background": "#2979FF40",
+    "statusBarItem.remoteBackground": "#34f5ab"
+  },
+  "materialTheme.accent": "Blue",
+  "editor.formatOnSave": true,
+  // Set the default
+  // "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": { "editor.formatOnSave": true }
+}
+
+
+
 

@@ -12,6 +12,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     /* 요소의 뒷 면을 숨김 앞카드 뒷카드 둘 다 뒷면을 숨기고 붙히니 
     하나의 진짜 카드같은 효과가 됨 */
