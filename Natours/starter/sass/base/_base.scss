@@ -32,3 +32,9 @@ body {
     padding: 0;
   }
 }
+
+// 글자 드레그 했을 때 드래그 색이랑 글자 색
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
