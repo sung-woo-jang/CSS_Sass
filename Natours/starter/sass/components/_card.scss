@@ -180,7 +180,10 @@
   이이이이이이이이이
   */
 
-  @include respond(tab-port) {
+  // @include respond(tab-port) {
+  /* 터치기기인지 마우스 쓰는 기기인지 알잘딱깔센 함 */
+  @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
