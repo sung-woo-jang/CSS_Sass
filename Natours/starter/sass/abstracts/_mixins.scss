@@ -28,6 +28,8 @@ $breakpoint argument choices:
 - tap-port
 - tap-land
 - big-desktop
+
+ORDER : Base + typography > general layout + page layout > components
 */
 @mixin respond($breakpoint) {
   @if $breakpoint==phone {
@@ -54,9 +56,3 @@ $breakpoint argument choices:
     }
   } //1800px
 }
-
-/* 
-@include respond(phone){
-    font-size: 50%;
-} 
-*/
