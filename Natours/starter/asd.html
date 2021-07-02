@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Responsive Navbar</title>
+  </head>
+
+  <body>
+    <header class="navigation__header">
+      <div class="container" id="navBar">
+        <input type="checkbox" name="" id="check" />
+
+        <div class="logo-container">
+          <h3 class="logo">EFD<span>Korea</span></h3>
+        </div>
+
+        <nav class="nav-btn">
+          <div class="nav-links">
+            <ul class="nav-ul">
+              <!-- Home -->
+              <li class="nav-link home_active">
+                <a href="index.php" class="nav__link">
+                  <!--    <svg class="home__icon">
+                <use xlink:href="img/sprite.svg#icon-home"></use>
+              </svg> -->
+                  Home
+                </a>
+              </li>
+
+              <!-- 교육안내 -->
+              <li class="nav-link">
+                <a href="info.php" class="nav__link">
+                  <!--      <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg> -->
+                  교육안내
+                </a>
+                <div class="dropdown">
+                  <ul>
+                    <li class="dropdown-link">
+                      <a href="info.php" class="dropdown__link">
+                        초등부 과정
+                      </a>
+                    </li>
+
+                    <li class="dropdown-link">
+                      <a href="info2.php" class="dropdown__link">
+                        중등부 과정
+                      </a>
+                    </li>
+
+                    <li class="dropdown-link">
+                      <a href="info3.php" class="dropdown__link">
+                        고등부 과정
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- 교육자료소개 -->
+              <li class="nav-link">
+                <a href="intro.php" class="nav__link">
+                  <!-- <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg> -->
+                  교육자료 소개
+                </a>
+
+                <div class="dropdown">
+                  <ul>
+                    <li class="dropdown-link">
+                      <a href="intro.php" class="dropdown__link">
+                        Elementary
+                      </a>
+                    </li>
+
+                    <li class="dropdown-link">
+                      <a href="intro2.php" class="dropdown__link">
+                        Middle
+                      </a>
+                    </li>
+
+                    <li class="dropdown-link">
+                      <a href="intro3.php" class="dropdown__link">
+                        High</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- 고객지원 -->
+              <li class="nav-link">
+                <a href="customer.php" class="nav__link">
+                  <!--  <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg> -->
+                  고객 지원
+                </a>
+
+                <div class="dropdown">
+                  <ul>
+                    <li class="dropdown-link">
+                      <a href="customer.php" class="dropdown__link">
+                        자주묻는 질문</a
+                      >
+                    </li>
+
+                    <li class="dropdown-link">
+                      <a href="board.php" class="dropdown__link">
+                        공지사항</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- 나의 강의실 -->
+              <li class="nav-link">
+                <a href="#" class="nav__link">
+                  <!--  <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg> -->
+                  My class
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="hamburger-menu-container">
+          <div class="hamburger-menu">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
